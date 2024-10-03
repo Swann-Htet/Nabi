@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video</title>
+    
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            padding: 0;
+            background: black;
+            margin: 0;
+          }
+          
+          canvas {
+            width: 100%;
+            height: 100%;
+          }
+        
+          ::-webkit-scrollbar {
+            width: 0;
+          }
+        
+          .video {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            border: 2px solid #FFF;
+          }
+        
+          .v-c {
+            display: block;
+          }
+        
+          .v-p {
+            display: none;
+          }
+        
+          .back {
+            position: fixed;
+            top: 3%;
+            left: 2%;
+          }
+        
+          .back button {
+            background-color: #00061E;
+            outline: none;
+            border: 2px solid #fff;
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            cursor: pointer;
+            line-height: 45px;
+            font-size: 1.7em;
+            color: #fff;
+            transition: all ease-in-out 0.5s;
+          }
+        
+          .back button:hover {
+            background-color: #fff;
+            outline: none;
+            border: 2px solid #00061E;
+            border-radius: 50%;
+            width: 50px;
+            height: 50%;
+            cursor: pointer;
+            line-height: 45px;
+            font-size: 1.7em;
+            color: #000;
+          }
+        
+          @media screen and (max-width: 992px) {
+            .v-c {
+                display: none;
+              }
+            
+              .v-p {
+                display: block;
+              }
+        
+              .back {
+                position: fixed;
+                top: 3%;
+                left: 4%;
+              }
+            
+              .back button {
+                background-color: #00061E;
+                outline: none;
+                width: 30px;
+                height: 30px;
+                cursor: pointer;
+                line-height:25px;
+                font-size: 1em;
+                color: #fff;
+                transition: all ease-in-out 0.5s;
+              }
+          }
+    </style>
+</head>
+<body>
+    <div class="back">
+        <a href="content01.html">
+            <img src="asset/images/back.png" alt="" height="30px">
+        </a>
+      </div>
+    <canvas id="canvas"></canvas>
+
+    <div class="video">
+        <video class="v-c" width="250px" controls> 
+            <source src="https://firebasestorage.googleapis.com/v0/b/the-whole-kmd.appspot.com/o/Nabi%2FNabi.mov?alt=media&token=4fca6955-4ac2-44e3-9992-673f994e4866" type="">
+        </video>
+
+        <video controls class="v-p" width="250px" controls>
+            <source src="https://firebasestorage.googleapis.com/v0/b/the-whole-kmd.appspot.com/o/Stella%2FStella.mp4?alt=media&token=7a58ce67-b52b-421f-8a12-5f5fec33756f" type="">
+        </video>
+    </div>
+
+    <script src="JS/script06.js"></script>
+</body>
+</html>
